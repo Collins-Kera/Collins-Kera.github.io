@@ -28,6 +28,10 @@ angular
         controller: 'AboutCtrl'
       })
       //add a new route here for each new page added to the site
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
