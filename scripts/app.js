@@ -37,7 +37,7 @@ angular
         controller: ' '
       })
       .when('/services', {
-        templateUrl: 'views/login.html',
+        templateUrl: 'views/services.html',
         controller: ' '
       })
       .when('/register', {
