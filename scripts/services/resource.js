@@ -45,4 +45,45 @@ angular.module('angbaseApp')
     
 
     
-  });
+  })
+  .factory("Auth", ["$firebaseAuth", function($firebaseAuth) {
+  var ref = new Firebase("https://improvement.firebaseio.com");
+
+  var auth = $firebaseAuth(ref);
+
+  var fns = 
+   {
+      auth: auth,
+
+      login: function(provider, opts) {
+          return auth.$authWithOAuthPopup(provider, opts);
+        },
+        passwordLogin: function(creds, opts) {
+          return auth.$authWithPassword(creds, opts);
+        },
+
+        logout: function() {
+          auth.$unauth();
+          
+        },
+        getUser: function() {
+          return auth.$getAuth();
+        },
+        createAccount: function(email, pass, opts) {
+          return auth.$createUser({email: email, password: pass})
+            .then(function() {
+              // authenticate so we have permission to write to Firebase
+              return fns.passwordLogin({email: email, password: pass}, opts);
+            })
+            .then(function(user) {
+              // store user data in Firebase after creating account
+              //return createProfile(user.uid, email/*, name*/).then(function() {
+               // return user;
+              //});
+            });
+        },
+
+
+  }
+  return fns;
+}]);

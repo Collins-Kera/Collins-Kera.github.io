@@ -30,19 +30,19 @@ angular
       //add a new route here for each new page added to the site
       .when('/login', {
         templateUrl: 'views/login.html',
-        controller: ' '
+        controller: 'LoginCtrl'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: ' '
+        controller: 'ContactCtrl '
       })
       .when('/services', {
         templateUrl: 'views/services.html',
-        controller: ' '
+        controller: 'ServicesCtrl'
       })
       .when('/register', {
         templateUrl: 'views/register.html',
-        controller: ' '
+        controller: 'RegisterCtrl'
       })
       .otherwise({
         redirectTo: '/'

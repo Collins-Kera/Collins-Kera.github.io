@@ -1,4 +1,5 @@
 
+/*
 console.log("in script");
 var form = document.getElementById('frmLogin');
 console.log(form);
@@ -29,3 +30,46 @@ var login = function () {
   }
 });
 }
+*/
+'use strict';
+
+/**
+ * @ngdoc function
+ * @name angbaseApp.controller:LoginCtrl
+ * @description
+ * # LoginCtrl
+ * Methods for logging a user into the system.
+ */
+angular.module('angbaseApp')
+  .controller('LoginCtrl', function ($scope, Auth, $location) {
+    
+
+    $scope.passwordLogin = function(email, pass) {
+      $scope.err = null;
+      Auth.passwordLogin({email: email, password: pass}, {rememberMe: true}).then(
+        redirect, showError
+      );
+    };
+
+    $scope.createAccount = function(email, pass, confirm) {
+      $scope.err = null;
+      if( !pass ) {
+        $scope.err = 'Please enter a password';
+      }
+      else if( pass !== confirm ) {
+        $scope.err = 'Passwords do not match';
+      }
+      else {
+        Auth.createAccount(email, pass, {rememberMe: true})
+          .then(redirect, showError);
+      }
+    };
+
+    function redirect() {
+      $location.path('/');
+    }
+
+    function showError(err) {
+      $scope.err = err;
+    }
+  });
