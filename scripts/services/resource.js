@@ -46,10 +46,9 @@ angular.module('angbaseApp')
 
     
   })
-  .factory("Auth", ["$firebaseAuth", function($firebaseAuth) {
-  var ref = new Firebase("https://improvement.firebaseio.com");
-
-  var auth = $firebaseAuth(ref);
+  .factory("Auth", ["$firebaseAuth", "fbResource", "createProfile", function($firebaseAuth, fbResource, createProfile) {
+  
+  var auth = $firebaseAuth(fbResource.ref());
 
   var fns = 
    {
@@ -77,13 +76,41 @@ angular.module('angbaseApp')
             })
             .then(function(user) {
               // store user data in Firebase after creating account
-              //return createProfile(user.uid, email/*, name*/).then(function() {
-               // return user;
-              //});
+              return createProfile(user.uid, email/*, name*/).then(function() {
+                return user;
+              });
             });
         },
 
 
   }
   return fns;
-}]);
+}])
+.factory('createProfile', function(fbResource, $q, $timeout) {
+      return function(id, email, name) {
+        var ref = fbResource.ref('users', id), def = $q.defer();
+        ref.set({email: email, name: name||firstPartOfEmail(email)}, function(err) {
+          $timeout(function() {
+            if( err ) {
+              def.reject(err);
+            }
+            else {
+              def.resolve(ref);
+            }
+          });
+        });
+
+        function firstPartOfEmail(email) {
+          return ucfirst(email.substr(0, email.indexOf('@'))||'');
+        }
+
+        function ucfirst (str) {
+          // credits: http://kevin.vanzonneveld.net
+          str += '';
+          var f = str.charAt(0).toUpperCase();
+          return f + str.substr(1);
+        }
+
+        return def.promise;
+      };
+    });

@@ -64,7 +64,16 @@ angular.module('angbaseApp')
           .then(redirect, showError);
       }
     };
+    $scope.resetPassword = function(email){
+       Auth.resetPassword(email);  
+          
+      $scope.reset = false;
 
+    };
+
+    $scope.cancelReset = function(){
+        $scope.reset = false;
+    };   
     function redirect() {
       $location.path('/');
     }
