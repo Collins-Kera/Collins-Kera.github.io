@@ -30,7 +30,7 @@ angular
       //add a new route here for each new page added to the site
       .when('/login', {
         templateUrl: 'views/login.html',
-        controller: 'LoginCtrl'
+        controller: ' '
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
