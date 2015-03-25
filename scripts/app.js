@@ -36,10 +36,10 @@ angular
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl '
       })
-      .when('/services', {
-        templateUrl: 'views/services.html',
-        controller: 'ServicesCtrl'
-      })
+      // .when('/services', {
+      //   templateUrl: 'views/services.html',
+      //   controller: 'ServicesCtrl'
+      // })
       .when('/register', {
         templateUrl: 'views/register.html',
         controller: 'RegisterCtrl'

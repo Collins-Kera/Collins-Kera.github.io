@@ -40,6 +40,15 @@ angular.module('angbaseApp')
               });
             });
         },
+        resetPassword: function(email) {
+          return auth.$resetPassword({email: email})
+          .then(function() {
+            console.log("Password reset email sent successfully!");
+          })
+          .catch(function(error) {
+            console.error("Error: ", error);
+          });
+        },
 
 
   }

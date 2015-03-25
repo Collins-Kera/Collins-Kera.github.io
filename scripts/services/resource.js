@@ -10,7 +10,7 @@
 angular.module('angbaseApp')
   .factory('fbResource', function ($firebase) {
     //set FireBase URL
-    var FBURL = 'https://improvement.firebaseio.com';
+    var FBURL = 'https://sweltering-torch-2482.firebaseio.com';
 
     //parse path variable
     function pathRef(args) {

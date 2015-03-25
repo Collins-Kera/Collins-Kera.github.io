@@ -1,16 +1,3 @@
-<!--
-<div id="main">
-    <h3>Login</h3>
-    <form id="frmLogin" role="form" method="POST">
-        <label>Username (Email):</label>
-        <input type="email" name="userEmail">
-        <label>Password: </label>
-        <input type="password" name="userPassword">
-        <input type="submit" value="submit"> 
-    </form>
-    <p id="loginStatus"></p>
-</div>
--->
 <h2>Login Page</h2>
 
 <form role="form">
@@ -23,7 +10,7 @@
     <button  class="btn btn-primary" ng-click="resetPassword(email)">Send Email</button>
     <button  class="btn btn-default" ng-click="cancelReset()">Cancel</button>
   </p>
-  <p class="form-group" ng-hide="reset">
+  <p class="form-group" ng-hide="reset || tokenLogin">
     <label for="loginPass">password</label>
     <input id="loginPass" required name="pass" type="password" ng-model="pass" class="form-control" ng-hide="reset" />
   </p>
@@ -31,14 +18,26 @@
     <label for="loginConfirm">confirm pass</label>
     <input id="loginConfirm" required name="confirm" type="password" ng-model="confirm" class="form-control" />
   </p>
-
-  <p ng-hide="reset">
+  <p class="form-group" ng-show="tokenLogin">
+    Enter your token found in the password reset email.
+    <label for="loginToken">Token</label>
+    <input id="loginToken" required name="token" type="text" ng-model="token" class="form-control" />
+    <button class="btn btn-default" ng-click="loginWithToken(email, token)">Login</button>
+  </p>
+  <p class="form-group" ng-show="changePass">
+    Enter a new password.
+    <label for="newPass">Password</label>
+    <input id="newPass" required name="pass" type="password" ng-model="pass" class="form-control" />
+    <button class="btn btn-default" ng-click="changePasword(email, pass, confirm)">Change Password</button>
+  </p>
+  <p ng-hide="reset || tokenLogin">
     <button  class="btn btn-primary" ng-click="passwordLogin(email, pass)" ng-hide="createMode">Log In</button>
     <button  class="btn btn-default" ng-click="createMode = true" ng-hide="createMode">Register</button>
     <button  class="btn btn-default" ng-click="reset = true">Forgot Password</button>
     <button  class="btn btn-primary" ng-cloak ng-show="createMode"
             ng-click="createAccount(email, pass, confirm)">Create Account</button>
     <button  class="btn btn-default" ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</button>
+    <
   </p>
 </form>
 <p ng-show="err" class="bg-danger">{{err}}</p>

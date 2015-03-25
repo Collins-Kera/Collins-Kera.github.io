@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name angbaseApp.controller:RegisterCtrl
+ * @name angbaseApp.controller:ContactCtrl
  * @description
- * # RegisterCtrl
+ * # ContactCtrl
  * Controller of the angbaseApp
  */
 angular.module('angbaseApp')
-  .controller('RegisterCtrl', function ($scope) {
+  .controller('ContactCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
