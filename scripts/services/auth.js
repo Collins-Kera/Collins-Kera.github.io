@@ -41,7 +41,7 @@ angular.module('angbaseApp')
             });
         },
         resetPassword: function(email) {
-          auth.$resetPassword({email: email})
+          return auth.$resetPassword({email: email})
           .then(function() {
             console.log("Password reset email sent successfully!");
           })

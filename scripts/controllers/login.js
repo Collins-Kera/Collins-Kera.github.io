@@ -48,11 +48,11 @@ angular.module('angbaseApp')
 
     //send them to the home screen if login successful  
     function redirect() {
-      $location.path('/');
+      $location.path('/profile');
     }
-    function redirectRegister() {
-      $location.path('/register');
-    }
+    // function redirectRegister() {
+    //   $location.path('/register');
+    // }
 
     function showError(err) {
       $scope.err = err;
