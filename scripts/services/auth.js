@@ -48,7 +48,7 @@ angular.module('angbaseApp')
           .catch(function(error) {
             console.error("Error: ", error);
           });
-});
+        },
 
 
   }
