@@ -36,8 +36,8 @@ angular.module('angbaseApp')
     //Send reset email...needs to be implemented in Auth
     $scope.resetPassword = function(email){
        Auth.resetPassword(email);  
-          
       $scope.reset = false;
+      $scope.tokenLogin = true;
 
     };
 
