@@ -23,14 +23,18 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
       //add a new route here for each new page added to the site
       .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
+      })
+      .when('/meet-the-doctor', {
+        templateUrl: 'views/meet-the-doctor.html',
+        controller: 'MeetCtrl'
+      })
+      .when('/about-orthodontics', {
+        templateUrl: 'views/about-orthodontics.html',
+        controller: 'AboutCtrl '
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
