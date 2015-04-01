@@ -12,7 +12,6 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/style_new.css">
     <!-- endbuild -->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family='Open Sans:b,bi'">
@@ -25,28 +24,40 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#/main">Home</a></li>
-          <li><a ng-href="#/meet-the-doctor">Meet the Doctor</a></li>
-          <li><a ng-href="#/about-orthodontics">About Orthodontics</a></li>
-          <li><a ng-href="#/contact">Contact</a></li>
-            
-        </ul>
-      </div>
+      <header>
+          <div id="topbar">
+                <ul id="social">
+                    <li><a href="#" target="blank"><img src="images/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#" target="blank"><img src="images/twitter.png" alt="Twitter"></a></li>
+                    <li><a href="#" target="blank"><img src="images/rss.png" alt="RSS"></a></li>
+                </ul>
+            </div>
+            <a href="/"><img src="images/logo.png" alt="Brigham Dental Logo"/></a>
+            <h1>Brigham Dental</h1>
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li class="active"><a ng-href="views/main">Home</a></li>
+                    <li><a ng-href="views/meet-the-doctor">Meet the Doctor</a></li>
+                    <li><a ng-href="views/about-orthodontics">About Orthodontics</a></li>
+                    <li><a ng-href="views/contact">Contact</a></li>
+                </ul>
+            </nav>
+      </header>
 
       <!-- this is where the view content will be inserted. See app.js to set which html template goes with each URL -->
       <div ng-view=""></div>
 
-      <div class="footer">
-            <ul class="nav nav-pills pull-right">
-                <li class="active"><a ng-href="#/main">Home</a></li>
-                <li><a ng-href="#/meet-the-doctor">Meet the Doctor</a></li>
-                <li><a ng-href="#/about-orthodontics">About Orthodontics</a></li>
-                <li><a ng-href="#/contact">Contact</a></li>
-            </ul>
+      <footer>
+          <nav>
+                <ul>
+                    <li class="active"><a ng-href="views/main">Home</a></li>
+                    <li><a ng-href="views/meet-the-doctor">Meet the Doctor</a></li>
+                    <li><a ng-href="views/about-orthodontics">About Orthodontics</a></li>
+                    <li><a ng-href="views/contact">Contact</a></li>
+                </ul>
+          </nav>
             <p id="copyright">All content &copy; 2015<span> Rexburg Orthodontics</span>.</p>
-     </div>
+     </footer>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
