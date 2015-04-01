@@ -49,7 +49,9 @@ angular.module('angbaseApp')
             console.error("Error: ", error);
           });
         },
-
+        changePassword: function() {
+          
+        },
 
   }
   return fns;

@@ -10,7 +10,7 @@
 angular.module('angbaseApp')
   .controller('LoginCtrl', function ($scope, Auth, $location) {
     
-    //in the scope so we can call it from teh view...attached to the Login button
+    //in the scope so we can call it from the view...attached to the Login button
     $scope.passwordLogin = function(email, pass) {
       $scope.err = null;
       Auth.passwordLogin({email: email, password: pass}, {rememberMe: true}).then(
@@ -39,6 +39,16 @@ angular.module('angbaseApp')
       $scope.reset = false;
       $scope.tokenLogin = true;
 
+    };
+
+    $scope.loginWithToken = function(){
+      Auth.loginWithToken(email, token);
+      $scope.changePass = true;
+    };
+
+    $scope.changePass = function(){
+      Auth.changePass(email, pass);
+      
     };
 
     //reset form in view if they change their minds
