@@ -123,7 +123,7 @@ margin-bottom: -3px;
 }
 #main_content {
 width: 420px;
-padding: 0px 20px 0px 20px;
+padding: 0px 30px 0px 30px;
 display: inline;
 float: right;
 }
@@ -142,6 +142,7 @@ float: left;
 #home_image {
 width: 280px;
 padding: 0px 20px 0px 20px;
+display: inline;
 }
 .image_inline {
 width: 450px;
