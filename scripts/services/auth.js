@@ -2,62 +2,21 @@
 
 /**
  * @ngdoc service
- * @name angbaseApp.fbResource
+ * @name angbaseApp.Auth
  * @description
- * # fbResource
- * provides a FireBase ref connected to a specific path
+ * # Auth
+ * provides Auth methods for firebase
  */
 angular.module('angbaseApp')
-  .factory('fbResource', function ($firebase) {
-    //set FireBase URL
-    var FBURL = 'https://sweltering-torch-2482.firebaseio.com';
-
-    //parse path variable
-    function pathRef(args) {
-      for (var i = 0; i < args.length; i++) {
-        if (angular.isArray(args[i])) {
-          args[i] = pathRef(args[i]);
-        }
-        else if( typeof args[i] !== 'string' ) {
-          throw new Error('Argument '+i+' to firebaseRef is not a string: '+args[i]);
-        }
-      }
-      return args.join('/');
-    }
-
-    //function to return a FireBase Ref for the passed in path
-    function firebaseRef(path) { // jshint ignore:line
-      var ref = new Firebase(FBURL); // jshint ignore:line
-      var args = Array.prototype.slice.call(arguments);
-      if( args.length ) {
-        ref = ref.child(pathRef(args));
-      }
-      return ref;
-    }
-
-    return {
-      ref: firebaseRef,
-      sync: function(ref) {
-          return $firebase(ref);
-       }
-    };
-
-    
-
-    
-  })
-  .factory("Auth", ["$firebaseAuth", "fbResource", "createProfile", function($firebaseAuth, fbResource, createProfile) {
+.factory("Auth", ["$firebaseAuth", "fbResource", "createProfile", function($firebaseAuth, fbResource, createProfile) {
   
   var auth = $firebaseAuth(fbResource.ref());
 
   var fns = 
    {
       auth: auth,
-
-      login: function(provider, opts) {
-          return auth.$authWithOAuthPopup(provider, opts);
-        },
-        passwordLogin: function(creds, opts) {
+    
+      passwordLogin: function(creds, opts) {
           return auth.$authWithPassword(creds, opts);
         },
 
@@ -81,6 +40,15 @@ angular.module('angbaseApp')
               });
             });
         },
+        resetPassword: function(email) {
+          return auth.$resetPassword({email: email})
+          .then(function() {
+            console.log("Password reset email sent successfully!");
+          })
+          .catch(function(error) {
+            console.error("Error: ", error);
+          });
+        },
 
 
   }
@@ -89,6 +57,7 @@ angular.module('angbaseApp')
 .factory('createProfile', function(fbResource, $q, $timeout) {
       return function(id, email, name) {
         var ref = fbResource.ref('users', id), def = $q.defer();
+        //this line does the actual creation of the profile.  the rest is promise code
         ref.set({email: email, name: name||firstPartOfEmail(email)}, function(err) {
           $timeout(function() {
             if( err ) {
@@ -100,6 +69,7 @@ angular.module('angbaseApp')
           });
         });
 
+        //convenience method if they don't provide a name.
         function firstPartOfEmail(email) {
           return ucfirst(email.substr(0, email.indexOf('@'))||'');
         }

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Test Page</title>
+	<script src='https://cdn.firebase.com/js/client/2.0.5/firebase.js'></script>
+</head>
+<body>
+	<div id="main">
+		<h3>Login</h3>
+		<form id="frmLogin" role="form" method="POST">
+			<label>Username (Email):</label>
+			<input type="email" name="userEmail">
+			<label>Password: </label>
+			<input type="password" name="userPassword">
+			<input type="submit" name="submit" value="submit"> 
+		</form>
+		<p id="loginStatus"></p>
+	</div>
+	<div>
+		<h2>Register</h2>
+		<form id="frmRegister" role="form" method="POST">
+			<div class="form-group">
+				<label for="txtRegEmail">Email address</label>
+				<input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="userEmail" />
+			</div>
+			<div class="form-group">
+				<label for="txtRegPass">Password</label>
+				<input type="password" class="form-control" id="txtPass" placeholder="Password" name="userPassword" />
+			</div>
+			<button type="submit" class="btn btn-default">Register</button>
+		</form>
+		<p id="regStatus"></p>
+	</div>
+	<script src="test.js"></script>
+	<script src="register.js"></script>
+</body>
+</html>
