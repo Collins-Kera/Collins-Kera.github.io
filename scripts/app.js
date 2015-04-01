@@ -34,20 +34,20 @@ angular
       })
       .when('/about-orthodontics', {
         templateUrl: 'views/about-orthodontics.html',
-        controller: 'AboutCtrl '
+        controller: 'AboutCtrl'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl '
+        controller: 'ContactCtrl'
       })
       // .when('/services', {
       //   templateUrl: 'views/services.html',
       //   controller: 'ServicesCtrl'
       // })
-      .when('/register', {
-        templateUrl: 'views/register.html',
-        controller: 'RegisterCtrl'
-      })
+      // .when('/register', {
+      //   templateUrl: 'views/register.html',
+      //   controller: 'RegisterCtrl'
+      // })
       .otherwise({
         redirectTo: '/'
       });
