@@ -1,8 +1,8 @@
 body {
-/*width: 1000px;*/
+width: 1070px;
 margin: 0px auto;
 font-family: 'open Sans', sans-serif;
-font-size: 1.2em;
+font-size: 0.9em;
 height: 100%;
 }
 header {
@@ -57,11 +57,14 @@ padding-top: 40px;
 }
 h1 {
 color: #1d4e89;
-font-size: 2.5em;
+font-size: 2em;
+padding-top: 10px;
+padding-bottom: 15px;
 }
 h2 {
-padding-top: 10px;
-font-size: 1.2em;
+padding-top: 0px;
+margin-top: 0px;
+font-size: 1.4em;
 color: #1d4e89;
 }
 header nav {
@@ -71,7 +74,8 @@ text-align: right;
 margin-right: 50px;
 }
 header nav ul {
-padding-top: 8px;
+padding-top: 0px;
+margin-top: -10px;
 float: right;
 }
 header nav li {
@@ -81,7 +85,7 @@ font-family: 'Arial Black', Gadget, sans-serif;
 color: #ffffff;
 padding-left: 20px;
 font-weight: bold;
-font-size: 1.5em;
+font-size: 1.2em;
 }
 nav ul li a:link {
 color: #ffffff;
@@ -109,7 +113,7 @@ background-color: #ffffff;
 padding: 0px;
 margin-top: 0px;
 overflow: auto;
-padding-bottom: 50px;
+padding-bottom: 20px;
 }
 #main_image {
 /*width: 100%;*/
@@ -145,16 +149,30 @@ display: inline;
 float: left;
 border: 1px solid #1D4E89;
 }
+/*Special width for meet the doctor page */
+.image_inline_meet {
+display: inline;
+float: left;
+border: 1px solid #1D4E89;
+margin-bottom: 30px;
+}
 .text_inline {
-width: 400px;
-margin-left: 30px;
+width: 450px;
+padding-left: 20px;
+display: inline;
+float: right;
+}
+/*Special width for meet the doctor page */
+.text_inline_meet {
+width: 650px;
+padding-left: 20px;
 display: inline;
 float: right;
 }
 .one-half-full {
 display: block;
 margin-bottom: 50px;
-width: 920px;
+width: 1000px;
 height: 300px;
 }
 .sidebar {
@@ -222,9 +240,9 @@ color: #cca756;
 padding-top: 21px;
 padding-bottom: 40px;
 background-color: #1d4e89;
-height: 50px;
+height: 20px;
 clear: both;
-margin-top: -50px;
+margin-top: -20px;
 margin-bottom: 0px;
 font-size: .9em;
 }
