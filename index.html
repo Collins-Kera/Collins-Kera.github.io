@@ -1,83 +1,9 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Rexburg Orthodontics</title>
-		<meta charset="utf-8"/>
-		<link href="style_new.css" type="text/css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family='Open Sans:b,bi'">
-	</head>
-	<body>
-		<header>
-			<div id="topbar">
-				<ul id="social">
-					<li><a href="#" target="blank"><img src="images/facebook.png" alt="Facebook"></a></li>
-					<li><a href="#" target="blank"><img src="images/twitter.png" alt="Twitter"></a></li>
-					<li><a href="#" target="blank"><img src="images/rss.png" alt="RSS"></a></li>
-				</ul>
-			</div>
-			<a href="/"><img id="logo" src="images/logo.png" alt="Brigham Dental Logo"/></a>
-			<h1>Rexburg Orthodontics</h1>
-			<nav>
-				<ul>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="about_orthodontics.html">About Orthodontics</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-					<li><a href="login.html" id="login_background">Login</a></li>
-				</ul>
-			</nav>
-		</header>
-		<div id="main">
-			<img src="images/new_home.jpg" id="main_image" alt="Main Image" />
-			<section id="main_content">
-				<h1>Welcome to Rexburg Orthodontics</h1>
-				<p>Dr. Summers and his friendly staff welcome the opportunity to help you find a healthy, beautiful smile. Dr. Summers is an orthodontic speacialist committed to providing excellent care in a comfortable, relaxed environment.</p>
-				<p>We are aware that each individual has different needs and take pride in thoroughly explaining all treatment options availalbe. Dr. Summers offers a wide variety of treatment from early childhood to adult smile corretion. Whether you choose traditional metal braces, clear braces, or the Invisalign system, Dr. Summers’ expertise will bring out the smile in you.</p>
-				<p>We invite you to schedule a complimentary consultation where Dr. Summers and his staff will answer
-				any questions you may have. Please contact our Rexburg office at (208) 356-3621.</p>
-			</section>
-			<section id="home_image">
-			</section>
-			<aside class="sidebar">
-				<h3>NEW PATIENTS WELCOME</h3>
-				<p>Free Initial Consultation</p>
-				<p>208.365.3621</p>
-				<p>374 East 4th East, Rexburg, ID</p>
-				<h4>Hours:</h4>
-				<p> M-F: 8:00 to 5:00 </p>
-				<h4>Summer Hours:</h4>
-				<p> M-F: 8:00 to 4:00 </p>
-			</aside>
-		</div>
-		<footer>
-			<!-- Could add more sections to the footer: contact info, promotions, etc. -->
-			<section id="contact_info">
-			</section>
-			<section id="current_promo">
-			</section>
-			<section id="contact_form">
-			</section>
-			<nav>
-				<ul>
-					<li><a href="about.html">About Us</a></li>
-					<li><a href="about_orthodontics.html">About Orthodontics</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-					<li><a href="login.html">Login</a></li>
-				</ul>
-			</nav>
-			<p id="copyright">All content &copy; 2015<span> Rexburg Orthodontics</span>.</p>
-		</footer>
-	</body>
-</html>
-=======
-<!doctype html>
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
+    <title>Rexburg Orthodontics</title>
+    <meta name="description" content="Dr. Summers offers a wide variety of treatment from early childhood to adult smile corretion. Whether you choose traditional metal braces, clear braces, or the Invisalign system, Dr. Summers’ expertise will bring out the smile in you.">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -86,39 +12,67 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/style_new.css">
     <!-- endbuild -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family='Open Sans:b,bi'">
     <script src='https://cdn.firebase.com/js/client/2.0.5/firebase.js'></script>
   </head>
-  <body ng-app="angbaseApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <!-- Add your site or application content here -->
-    <!-- This is the navigation -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About Orthodontics</a></li>
-          <li><a ng-href="#/contact">Contact Us</a></li>
-          <!-- <li><a ng-href="#/services">Services and Technologies</a></li>  -->
-          <!-- <li><a ng-href="#/register">Register</a></li>  -->
-          <li><a ng-href="#/login">Login</a></li>  
-        </ul>
-        <h3 class="text-muted">angbase</h3>
-      </div>
-
-      <!-- this is where the view content will be inserted. See app.js to set which html template goes with each URL -->
-      <div ng-view=""></div>
-
-      <div class="footer">
-        <p>Footer</p>
-      </div>
-    </div>
-
-
+  <body>
+    <header>
+	<div id="topbar">
+            <ul id="social">
+		<li><a href="#" target="blank"><img src="images/facebook.png" alt="Facebook"></a></li>
+		<li><a href="#" target="blank"><img src="images/twitter.png" alt="Twitter"></a></li>
+		<li><a href="#" target="blank"><img src="images/rss.png" alt="RSS"></a></li>
+            </ul>
+	</div>
+	<a href="/"><img id="logo" src="images/logo.png" alt="Brigham Dental Logo"/></a>
+	<h1>Rexburg Orthodontics</h1>
+	<nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+		<li><a href="about_orthodontics.html">About Orthodontics</a></li>
+		<li><a href="services.html">Services</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+		<li><a href="login.html" id="login_background">Login</a></li>
+            </ul>
+	</nav>
+	</header>
+	<div id="main">
+            <img src="images/new_home.jpg" id="main_image" alt="Main Image" />
+            <section id="main_content">
+		<h1>Welcome to Rexburg Orthodontics</h1>
+		<p>Dr. Summers and his friendly staff welcome the opportunity to help you find a healthy, beautiful smile. Dr. Summers is an orthodontic speacialist committed to providing excellent care in a comfortable, relaxed environment.</p>
+		<p>We are aware that each individual has different needs and take pride in thoroughly explaining all treatment options availalbe. Dr. Summers offers a wide variety of treatment from early childhood to adult smile corretion. Whether you choose traditional metal braces, clear braces, or the Invisalign system, Dr. Summers’ expertise will bring out the smile in you.</p>
+		<p>We invite you to schedule a complimentary consultation where Dr. Summers and his staff will answer
+		any questions you may have. Please contact our Rexburg office at (208) 356-3621.</p>
+            </section>
+            <section id="home_image">
+            </section>
+            <aside class="sidebar">
+		<h3>NEW PATIENTS WELCOME</h3>
+		<p>Free Initial Consultation</p>
+		<p>208.365.3621</p>
+		<p>374 East 4th East, Rexburg, ID</p>
+		<h4>Hours:</h4>
+		<p> M-F: 8:00 to 5:00 </p>
+		<h4>Summer Hours:</h4>
+		<p> M-F: 8:00 to 4:00 </p>
+            </aside>
+	</div>
+	<footer>
+            <nav>
+		<ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about_orthodontics.html">About Orthodontics</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+		</ul>
+            </nav>
+            <p id="copyright">All content &copy; 2015<span> Rexburg Orthodontics</span>.</p>
+	</footer>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -165,4 +119,3 @@
         <!-- endbuild -->
 </body>
 </html>
->>>>>>> origin/master
