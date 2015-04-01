@@ -129,7 +129,7 @@ float: right;
 }
 #main_contact {
 width: 620px;
-padding: 50px 20px 0px 30px;
+padding: 50px 20px 30px 30px;
 display: inline;
 float: left;
 }
@@ -179,7 +179,7 @@ height: 300px;
 background-color:#6e88ae;
 width: 200px;
 padding: 10px 20px 0px 20px;
-height: 355px;
+height: 450px;
 display: inline;
 float: left;
 text-align: center;
@@ -189,7 +189,7 @@ color: #ffffff;
 #sidebar-contact {
 background-color:#6e88ae;
 width: 260px;
-height: 517px;
+height: 547px;
 padding: 10px 20px 23px 40px;
 display: inline;
 float: right;
