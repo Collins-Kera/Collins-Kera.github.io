@@ -115,7 +115,7 @@ border-radius: 3px;
 background-color: #ffffff;
 padding: 0px;
 margin-top: 0px;
-overflow: auto;
+/*overflow: auto;*/ /*Causing issues in Chrom*/
 padding-bottom: 20px;
 }
 #main_image {
