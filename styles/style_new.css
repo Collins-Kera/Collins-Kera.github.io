@@ -128,7 +128,12 @@ margin-bottom: -3px;
 width: 420px;
 padding: 0px 30px 0px 30px;
 display: inline;
-float: right;
+float: right;/*I added this to place the prom seccion to the right*/
+}
+/*padding on h1 element was separating the side block
+from footer*/
+#main_content h1 {
+	padding: 0;
 }
 #main_contact {
 width: 620px;
@@ -146,6 +151,7 @@ float: left;
 width: 280px;
 padding: 0px 20px 0px 20px;
 display: inline;
+float: right;
 }
 .image_inline {
 width: 450px;
