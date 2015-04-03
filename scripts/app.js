@@ -28,8 +28,8 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
-      .when('/meet-the-doctor', {
-        templateUrl: 'views/meet-the-doctor.html',
+      .when('/about-us', {
+        templateUrl: 'views/about-us.html',
         controller: 'MeetCtrl'
       })
       .when('/about-orthodontics', {
