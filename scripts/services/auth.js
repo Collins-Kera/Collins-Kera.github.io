@@ -60,7 +60,7 @@ angular.module('angbaseApp')
       return function(id, email, name) {
         var ref = fbResource.ref('users', id), def = $q.defer();
         //this line does the actual creation of the profile.  the rest is promise code
-        ref.set({email: email, name: name||firstPartOfEmail(email)}, function(err) {
+        ref.set({email: email, name: name||firstPartOfEmail(email), permission: 0}, function(err) {
           $timeout(function() {
             if( err ) {
               def.reject(err);
