@@ -8,13 +8,13 @@
  * Controller of the angbaseApp
  */
 angular.module('angbaseApp')
-  .controller('ProfileCtrl', function ($scope, Auth, $location) {
+  .controller('ProfileCtrl', function ($scope, Auth, $location, $route) {
 	if(!Auth.getUser()){
 		$scope.err = "Please Login";
 		$location.path('/login');
 	}
 	else {
-		window.location.reload();
+		refresh();
 		$scope.user = Auth.getUser();
 	}
 	$scope.changePassword = function(pass, newPass, confirm){
@@ -34,5 +34,8 @@ angular.module('angbaseApp')
     };
     function showError(err) {
       $scope.err = err;
+    }
+    function refresh(){
+    	$route.reload();
     }
 });
