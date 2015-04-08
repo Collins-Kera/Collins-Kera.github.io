@@ -62,7 +62,6 @@ angular.module('angbaseApp')
     //send them to the profile screen if login successful  
     function redirect() {
       $location.path('/profile');
-      $route.reload();
     }
     
     // function redirectRegister() {
