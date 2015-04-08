@@ -633,3 +633,9 @@ color: #008000;
 	}
 	
 }
+@media screen and (max-width: 320px) {
+        body {
+            width: 100%;
+            margin: 0px auto;
+        }
+}
