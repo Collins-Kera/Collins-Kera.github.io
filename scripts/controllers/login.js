@@ -49,22 +49,6 @@ angular.module('angbaseApp')
 
     };
 
-    $scope.changePassword = function(email, pass, newPass, confirm){
-      $scope.err = null;
-      if (!pass ) {
-        $scope.err = 'Please enter current password';
-      }
-      if (!newPass ) {
-        $scope.err = 'Please enter new password';
-      }
-      else if ( newPass !== confirm ) {
-        $scope.err = 'Passwords do not match';
-      }
-      else {
-      Auth.changePassword(email, pass, newPass).then(redirect, showError);
-      }
-    };
-
     //reset form in view if they change their minds
     $scope.cancelReset = function(){
         $scope.reset = false;

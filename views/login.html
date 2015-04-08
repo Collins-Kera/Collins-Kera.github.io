@@ -10,12 +10,7 @@
     <label for="loginPass">Password</label><br>
     <input class="highlight" id="loginPass" required name="pass" type="password" ng-model="pass" class="form-control" ng-hide="reset" size="40" maxlength="100"/>
   </p>
-  <p ng-show="changePass">
-    <label for="newPass">New Password</label><br>
-    <input class="highlight" id="newPass" required name="newPass" type="password" ng-model="pass" class="form-control" size="40" maxlength="100"/>
-    
-  </p>
-  <p ng-cloak ng-show="createMode || changePass">
+  <p ng-cloak ng-show="createMode">
     <label for="loginConfirm">Confirm Password</label>
     <br>
     <input class="highlight" id="loginConfirm" required name="confirm" type="password" ng-model="confirm" class="form-control" size="40" maxlength="100" />
@@ -28,7 +23,6 @@
     <button  class="btn btn-primary" ng-cloak ng-show="createMode"
             ng-click="createAccount(email, pass, confirm)">Create Account</button>
     <button  class="btn btn-default" ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</button>
-  <button class="btn btn-default" ng-click="changePasword(email, pass, newPass, confirm)">Change Password</button>
   <button  class="btn btn-primary" ng-click="resetPassword(email)">Send Email</button>
     <button  class="btn btn-default" ng-click="cancelReset()">Cancel</button>
   </p>
