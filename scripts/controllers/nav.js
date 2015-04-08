@@ -12,9 +12,6 @@ angular.module('angbaseApp')
     if(Auth.getUser()){
       $scope.loggedIn = true;
     }
-    Auth.onAuth(function(){
-      $scope.loggedIn = true;
-    })
     console.log($scope.loggedIn);
     $scope.logout = function() {
       Auth.logout();

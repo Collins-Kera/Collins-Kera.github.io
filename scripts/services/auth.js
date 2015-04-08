@@ -24,11 +24,6 @@ angular.module('angbaseApp')
           auth.$unauth();
           
         },
-        onAuth: function(){
-          auth.$onAuth(function(){
-            console.log("Logged in");
-          })
-        },
         getUser: function() {
           return auth.$getAuth();
         },
