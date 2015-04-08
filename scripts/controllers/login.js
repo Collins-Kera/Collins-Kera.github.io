@@ -21,13 +21,10 @@ angular.module('angbaseApp')
     //in the scope so we can call it from the view...attached to the Login button
     $scope.passwordLogin = function(email, pass) {
       $scope.err = null;
-      Auth.passwordLogin({email: email, password: pass}, {rememberMe: true}).then(
-        loginEvent, showError
-      );
-    };
-    $scope.loginEvent = function () {
       $rootScope.$broadcast('loginClick');
-      redirect();
+      Auth.passwordLogin({email: email, password: pass}, {rememberMe: true}).then(
+        redirect, showError
+      );
     };
     $scope.logout = function() {
       Auth.logout().then(redirectHome);
