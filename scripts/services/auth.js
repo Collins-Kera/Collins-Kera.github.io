@@ -28,13 +28,7 @@ angular.module('angbaseApp')
           return auth.$getAuth();
         },
         resetPassword: function(email) {
-          auth.$resetPassword({email: email})
-          .then(function() {
-            console.log("Password reset email sent successfully!");
-          })
-          .catch(function(error) {
-            console.error("Error: ", error);
-          });
+          auth.$resetPassword({email: email});
         },
         createAccount: function(email, pass, opts) {
           return auth.$createUser({email: email, password: pass})
