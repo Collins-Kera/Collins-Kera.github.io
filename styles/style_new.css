@@ -125,9 +125,9 @@ margin-top: 0px;
 padding-bottom: 20px;
 }
 #main_image {
-/*width: 100%;*/
-width: 1000px;
-height: 500px;
+width: 85%
+height: auto;
+padding-left: 50px;
 margin-bottom: -3px;
 }
 #main_content {
