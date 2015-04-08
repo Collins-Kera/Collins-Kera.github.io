@@ -8,7 +8,7 @@
  * Controller of the angbaseApp
  */
 angular.module('angbaseApp')
-  .controller('MeetCtrl', function ($scope) {
+  .controller('MeetCtrl', function ($scope, Auth) {
   $scope.loggedIn = Auth.getUser();
     console.log($scope.loggedIn);
   });
