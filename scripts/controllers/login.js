@@ -28,10 +28,10 @@ angular.module('angbaseApp')
     };
     $scope.logout = function() {
       Auth.logout().then(redirectHome);
-    }
+    };
     function redirectHome() {
       $location.path('/');
-    }
+    };
     //attached to the Register button
     $scope.createAccount = function(email, pass, confirm) {
       $scope.err = null;
@@ -48,8 +48,8 @@ angular.module('angbaseApp')
       }
     };
 
-    //Send reset email...needs to be implemented in Auth
-    $scope.resetPassword = function(email){
+    //Send reset email
+    $scope.resetPassword = function(email) {
        Auth.resetPassword(email);  
       $scope.reset = false;
       $scope.err = "Email sent.";
