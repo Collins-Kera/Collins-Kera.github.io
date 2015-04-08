@@ -35,7 +35,8 @@ angular.module('angbaseApp')
             })
             .then(function(user) {
               // store user data in Firebase after creating account
-              return createProfile(user.uid, email/*, name*/).then(function() {
+              var permission = 0;
+              return createProfile(user.uid, email/*, name*/, permission).then(function() {
                 return user;
               });
             });
@@ -57,10 +58,10 @@ angular.module('angbaseApp')
   return fns;
 }])
 .factory('createProfile', function(fbResource, $q, $timeout) {
-      return function(id, email, name) {
+      return function(id, email, name, permission) {
         var ref = fbResource.ref('users', id), def = $q.defer();
         //this line does the actual creation of the profile.  the rest is promise code
-        ref.set({email: email, name: name||firstPartOfEmail(email), permission: 0}, function(err) {
+        ref.set({email: email, name: name||firstPartOfEmail(email), permission: permission}, function(err) {
           $timeout(function() {
             if( err ) {
               def.reject(err);
