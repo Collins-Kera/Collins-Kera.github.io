@@ -9,7 +9,7 @@
  */
 angular.module('angbaseApp')
   .controller('MainCtrl', function ($scope,  Auth, $location) {
-$	scope.loggedIn = Auth.getUser();
+	$scope.loggedIn = Auth.getUser();
     console.log($scope.loggedIn);
     $scope.logout = function() {
       Auth.logout().then(redirectHome);
