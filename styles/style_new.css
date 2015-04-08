@@ -638,4 +638,7 @@ color: #008000;
             width: 100%;
             margin: 0px 0px;
         }
+        #main_content {
+            width: 35%;
+        }
 }
