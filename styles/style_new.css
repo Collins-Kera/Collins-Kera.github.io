@@ -549,6 +549,9 @@ color: #008000;
 <!-- Responsive Navigation -->
 
 @media screen and (max-width: 600px) {
+	body {
+		font-size: 0.6em;
+	}
 	nav {
 		position: relative;
 		min-height: 40px;
