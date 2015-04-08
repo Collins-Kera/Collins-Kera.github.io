@@ -653,4 +653,12 @@ color: #008000;
         .text_inline {
             padding-bottom: 10%;
         }
+        .nav {
+                position: absolute;
+                display: inline;
+                z-index: 6;
+		min-height: 40px;
+                float: right;
+                margin-left: 35%;
+	}	
 }
