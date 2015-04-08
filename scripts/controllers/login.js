@@ -9,7 +9,7 @@
  */
 angular.module('angbaseApp')
   .controller('LoginCtrl', function ($scope, Auth, $location) {
-    $scope.changePass = null;
+    $scope.changePass = false;
     $scope.setChangePass = function() {
       $scope.changePass = true;
     };
