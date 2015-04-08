@@ -16,8 +16,14 @@ angular.module('angbaseApp')
     if(Auth.getUser()){
     $scope.err = "You are logged in";
     $location.path('/profile');
-  }
-
+    }
+    //Send reset email
+    $scope.resetPassword = function(email) {
+       Auth.resetPassword(email);  
+      $scope.reset = false;
+      $scope.err = "Email sent.";
+      $location.path('/login');
+    };
     //in the scope so we can call it from the view...attached to the Login button
     $scope.passwordLogin = function(email, pass) {
       $scope.err = null;
@@ -46,15 +52,6 @@ angular.module('angbaseApp')
         Auth.createAccount(email, pass, {rememberMe: true})
           .then(redirect, showError);
       }
-    };
-
-    //Send reset email
-    $scope.resetPassword = function(email) {
-       Auth.resetPassword(email);  
-      $scope.reset = false;
-      $scope.err = "Email sent.";
-      $location.path('/login');
-
     };
 
     //reset form in view if they change their minds
