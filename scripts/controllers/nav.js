@@ -16,5 +16,9 @@ angular.module('angbaseApp')
     console.log($scope.loggedIn);
     $scope.logout = function() {
       Auth.logout();
+      if(!Auth.getUser()){
+        $scope.loggedIn = false;
+      }
+      //else show logout error
     }
   });
