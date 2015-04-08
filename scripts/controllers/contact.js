@@ -9,12 +9,7 @@
  */
 angular.module('angbaseApp')
   .controller('ContactCtrl', function ($scope, Auth, $location ) {
-    $scope.loggedIn = Auth.getUser();
-    console.log($scope.loggedIn);
-    $scope.logout = function() {
-      Auth.logout().then(redirectHome);
-    }
-    function redirectHome() {
-      $location.path('/');
+    $scope.clearForm = function() {
+      $scope.err = "Message Sent!";
     }
   });

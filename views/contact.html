@@ -22,8 +22,9 @@
                          <textarea rows="6" cols="40" id="message" class="highlight">
                          </textarea>
                     <br />
-                         <input type="submit" value="Submit" class="button">   <a href="http://www.freecontactform.com/email_form.php">Submit</a>
+                         <input type="submit" name="submit" value="Submit" ng-click="clearForm()" class="button">
             </form>
+            <p>{{err}}</p>
   </div>
  <aside id="sidebar-contact">
     <h3>OUR LOCATION</h3>
