@@ -13,22 +13,14 @@ angular.module('angbaseApp')
 		$scope.err = "Please Login";
 		$location.path('/login');
 	}
-	else {
-		$scope.user = Auth.getUser();
-	}
-	$scope.changePassword = function(pass, newPass, confirm){
+	
+	$scope.changePassword = function(email, pass, newPass, confirm){
       $scope.err = null;
-      if (!pass ) {
-        $scope.err = 'Please enter current password';
-      }
-      if (!newPass ) {
-        $scope.err = 'Please enter new password';
-      }
-      else if ( newPass !== confirm ) {
+      if ( newPass !== confirm ) {
         $scope.err = 'Passwords do not match';
       }
       else {
-      Auth.changePassword($scope.user.email, pass, newPass).then(showError);
+      Auth.changePassword(email, pass, newPass).then(showError);
       }
     };
     function showError(err) {

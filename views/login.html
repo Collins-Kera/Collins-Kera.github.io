@@ -3,17 +3,17 @@
 
 <form role="form">
   <p>
-    <label for="loginEmail">Email</label><br>
-    <input class="highlight" id="loginEmail" required name="email" type="email" ng-model="email" class="form-control" size="40" maxlength="100" />
+    <label for="email">Email</label><br>
+    <input class="highlight" id="email" required name="email" type="email" ng-model="email" class="form-control" size="40" maxlength="100" />
   </p>
   <p ng-hide="reset">
     <label for="loginPass">Password</label><br>
-    <input class="highlight" id="loginPass" required name="pass" type="password" ng-model="pass" class="form-control" ng-hide="reset" size="40" maxlength="100"/>
+    <input class="highlight" id="loginPass" name="pass" type="password" ng-model="pass" class="form-control" ng-hide="reset" size="40" maxlength="100"/>
   </p>
   <p ng-cloak ng-show="createMode">
     <label for="loginConfirm">Confirm Password</label>
     <br>
-    <input class="highlight" id="confirm" required name="confirm" type="password" ng-model="confirm" class="form-control" size="40" maxlength="100" />
+    <input class="highlight" id="confirm" name="confirm" type="password" ng-model="confirm" class="form-control" size="40" maxlength="100" />
   </p>
   
   <p ng-hide="reset">

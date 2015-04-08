@@ -16,8 +16,14 @@ angular.module('angbaseApp')
     if(Auth.getUser()){
     $scope.err = "You are logged in";
     $location.path('/profile');
-  }
-
+    }
+    //Send reset email
+    $scope.resetPassword = function(email) {
+       Auth.resetPassword(email);  
+      $scope.reset = false;
+      // $scope.err = "Email sent.";
+      // $location.path('/login');
+    };
     //in the scope so we can call it from the view...attached to the Login button
     $scope.passwordLogin = function(email, pass) {
       $scope.err = null;
@@ -28,10 +34,10 @@ angular.module('angbaseApp')
     };
     $scope.logout = function() {
       Auth.logout().then(redirectHome);
-    }
+    };
     function redirectHome() {
       $location.path('/');
-    }
+    };
     //attached to the Register button
     $scope.createAccount = function(email, pass, confirm) {
       $scope.err = null;
@@ -42,16 +48,10 @@ angular.module('angbaseApp')
         $scope.err = 'Passwords do not match';
       }
       else {
+        $rootScope.$broadcast('loginClick');
         Auth.createAccount(email, pass, {rememberMe: true})
           .then(redirect, showError);
       }
-    };
-
-    //Send reset email...needs to be implemented in Auth
-    $scope.resetPassword = function(email){
-       Auth.resetPassword(email);  
-      $scope.reset = false;
-
     };
 
     //reset form in view if they change their minds
