@@ -147,6 +147,12 @@ padding: 50px 20px 30px 30px;
 display: inline;
 float: left;
 }
+#forms p a{
+	color: black;
+	padding: 0px 5px 0px 5px;
+	min-width: 200px;
+	min-height: 40px;
+}
 #main_aboutortho {
 width: 920px;
 padding: 50px 20px 0px 30px;
