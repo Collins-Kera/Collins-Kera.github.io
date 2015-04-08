@@ -7,7 +7,7 @@
  * # NavCtrl
  * Controller of the angbaseApp
  */
-angular.module('angbaseApp')
+angular.module('angbaseApp.controllers')
   .controller('NavCtrl', function ($scope, Auth, $location) {
     if(Auth.getUser()){
       $scope.loggedIn = true;
