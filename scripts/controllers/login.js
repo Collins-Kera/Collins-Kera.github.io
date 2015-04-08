@@ -8,7 +8,7 @@
  * Methods for logging a user into the system.
  */
 angular.module('angbaseApp')
-  .controller('LoginCtrl', function ($scope, Auth, $location, $route) {
+  .controller('LoginCtrl', function ($scope, Auth, $location) {
     // $scope.changePass = false;
     // $scope.setChangePass = function() {
     //   $scope.changePass = true;
