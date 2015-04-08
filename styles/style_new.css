@@ -142,7 +142,7 @@ from footer*/
 	padding: 0;
 }
 #main_contact, #main_login, #profile {
-width: 80%;
+width: 60%;
 padding: 50px 20px 30px 30px;
 display: inline;
 float: left;
@@ -226,7 +226,7 @@ background-color: rgba(215, 208, 205, 0.8);
 padding: 10px 20px 10px 20px;
 margin-top: 10px;
 margin-bottom: 10px;
-width: 100%;
+width: 80%;
 }
 .highlight-messagebox {
 background-color: rgba(215, 208, 205, 0.8);
