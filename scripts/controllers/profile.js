@@ -14,7 +14,7 @@ angular.module('angbaseApp')
 		$location.path('/login');
 	}
 	else {
-		$location.reload();
+		window.location.reload();
 		$scope.user = Auth.getUser();
 	}
 	$scope.changePassword = function(pass, newPass, confirm){
