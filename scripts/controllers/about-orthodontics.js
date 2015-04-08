@@ -9,7 +9,8 @@
  */
 angular.module('angbaseApp')
   .controller('AboutCtrl', function ($scope) {
-    $scope.awesomeThings = [
+$scope.loggedIn = Auth.getAuth();
+scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'

@@ -9,6 +9,7 @@
  */
 angular.module('angbaseApp')
   .controller('ContactCtrl', function ($scope) {
+    $scope.loggedIn = Auth.getAuth();
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

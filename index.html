@@ -40,8 +40,8 @@
                     <li><a ng-href="#/about-us">About Us</a></li>
                     <li><a ng-href="#/about-orthodontics">About Orthodontics</a></li>
                     <li><a ng-href="#/contact">Contact</a></li>
-                    <li><a ng-href="#/login" id="login_background">Login</a></li>
-                    <!-- <li><a ng-show="Auth.getAuth" ng-click="logout" ng-href="#/login">Logout</a></li> -->
+                    <li><a ng-hide="loggedIn" ng-href="#/login" id="login_background">Login</a></li>
+                    <li><a ng-show="loggedIn" ng-click="logout" ng-href="#/login">Logout</a></li>
                 </ul>
             </nav>
       </header>
@@ -55,8 +55,8 @@
                     <li><a ng-href="#/">Home</a></li>
                     <li><a ng-href="#/about-us">About Us</a></li>
                     <li><a ng-href="#/about-orthodontics">About Orthodontics</a></li>
-                    <li><a ng-href="#/contact">Contact</a></li>
-                    <li><a ng-href="#/login" id="login_background">Login</a></li>
+                    <li><a ng-href="#/contact">Contact</a></li><!-- 
+                    <li><a ng-href="#/login" id="login_background">Login</a></li> -->
                     
                 </ul>
           </nav>

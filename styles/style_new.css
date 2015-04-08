@@ -140,7 +140,7 @@ from footer*/
 #main_content h1 {
 	padding: 0;
 }
-#main_contact, #main_login {
+#main_contact, #main_login, #profile {
 width: 620px;
 padding: 50px 20px 30px 30px;
 display: inline;
