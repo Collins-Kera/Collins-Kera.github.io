@@ -14,8 +14,11 @@ angular.module('angbaseApp')
 		$location.path('/login');
 	}
 	else {
-		$scope.user = Auth.getUser();
-    console.log($scope.user.email);
+		$scope.user = Auth.getUser().user;
+    console.log("email" + $scope.user.email);
+    // $scope.auth.$getCurrentUser().then(function(user) {
+    //      console.log(user);
+      });
 	}
 	$scope.changePassword = function(pass, newPass, confirm){
       $scope.err = null;
