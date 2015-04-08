@@ -13,7 +13,9 @@ angular.module('angbaseApp')
     // $scope.setChangePass = function() {
     //   $scope.changePass = true;
     // };
-    $scope.loggedIn = Auth.getUser();
+    if(Auth.getUser()){
+      $scope.loggedIn = true;
+    }
     console.log($scope.loggedIn);
     //in the scope so we can call it from the view...attached to the Login button
     $scope.passwordLogin = function(email, pass) {
