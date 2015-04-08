@@ -125,7 +125,7 @@ margin-top: 0px;
 padding-bottom: 20px;
 }
 #main_image {
-width: 85%
+width: 85%;
 height: auto;
 padding-left: 50px;
 margin-bottom: -3px;
@@ -146,12 +146,6 @@ width: 620px;
 padding: 50px 20px 30px 30px;
 display: inline;
 float: left;
-}
-#forms p a{
-	color: black;
-	padding: 0px 5px 0px 5px;
-	min-width: 200px;
-	min-height: 40px;
 }
 #main_aboutortho {
 width: 920px;
