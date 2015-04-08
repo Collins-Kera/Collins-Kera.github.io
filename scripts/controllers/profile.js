@@ -14,7 +14,6 @@ angular.module('angbaseApp')
 		$location.path('/login');
 	}
 	else {
-		refresh();
 		$scope.user = Auth.getUser();
 	}
 	$scope.changePassword = function(pass, newPass, confirm){
@@ -34,8 +33,5 @@ angular.module('angbaseApp')
     };
     function showError(err) {
       $scope.err = err;
-    }
-    function refresh(){
-    	$route.reload();
     }
 });
