@@ -8,7 +8,7 @@
  * Methods for logging a user into the system.
  */
 angular.module('angbaseApp')
-  .controller('LoginCtrl', function ($scope, Auth, $location) {
+  .controller('LoginCtrl', function ($scope, Auth, $location, $rootScope) {
     // $scope.changePass = false;
     // $scope.setChangePass = function() {
     //   $scope.changePass = true;
@@ -22,10 +22,12 @@ angular.module('angbaseApp')
     $scope.passwordLogin = function(email, pass) {
       $scope.err = null;
       Auth.passwordLogin({email: email, password: pass}, {rememberMe: true}).then(
-        redirect, showError
+        loginEvent, redirect, showError
       );
     };
-
+    $scope.loginEvent = function () {
+      $rootScope.$broadcast('loginClick');
+    };
     $scope.logout = function() {
       Auth.logout().then(redirectHome);
     }
