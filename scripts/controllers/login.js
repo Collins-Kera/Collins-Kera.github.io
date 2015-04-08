@@ -9,7 +9,10 @@
  */
 angular.module('angbaseApp')
   .controller('LoginCtrl', function ($scope, Auth, $location) {
-    
+    $scope.changePass = null;
+    $scope.setChangePass = function() {
+      $scope.changePass = true;
+    };
     //in the scope so we can call it from the view...attached to the Login button
     $scope.passwordLogin = function(email, pass) {
       $scope.err = null;
@@ -37,7 +40,6 @@ angular.module('angbaseApp')
     $scope.resetPassword = function(email){
        Auth.resetPassword(email);  
       $scope.reset = false;
-      $scope.tokenLogin = true;
 
     };
 

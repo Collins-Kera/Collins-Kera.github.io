@@ -2,20 +2,20 @@
   <h1>Login</h1>
 
 <form role="form">
-  <p class="form-group">
+  <p>
     <label for="loginEmail">Email</label><br>
     <input id="loginEmail" required name="email" type="email" ng-model="email" class="form-control" size="40" maxlength="100" class="highlight"/>
   </p>
-  <p class="form-group" ng-hide="reset">
+  <p ng-hide="reset">
     <label for="loginPass">Password</label><br>
     <input id="loginPass" required name="pass" type="password" ng-model="pass" class="form-control" ng-hide="reset" size="40" maxlength="100" class="highlight"/>
   </p>
-  <p class="form-group" ng-show="changePass">
+  <p ng-show="changePass">
     <label for="newPass">New Password</label><br>
     <input id="newPass" required name="newPass" type="password" ng-model="pass" class="form-control" size="40" maxlength="100" class="highlight"/>
     
   </p>
-  <p class="form-group" ng-cloak ng-show="createMode || changePass">
+  <p ng-cloak ng-show="createMode || changePass">
     <label for="loginConfirm">Confirm Password</label>
     <br>
     <input id="loginConfirm" required name="confirm" type="password" ng-model="confirm" class="form-control" size="40" maxlength="100" class="highlight"/>
