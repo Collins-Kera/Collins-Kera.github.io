@@ -23,6 +23,12 @@ angular.module('angbaseApp')
       );
     };
 
+    $scope.logout = function() {
+      Auth.logout().then(redirectHome);
+    }
+    function redirectHome() {
+      $location.path('/');
+    }
     //attached to the Register button
     $scope.createAccount = function(email, pass, confirm) {
       $scope.err = null;
@@ -70,6 +76,7 @@ angular.module('angbaseApp')
     function redirect() {
       $location.path('/profile');
     }
+    
     // function redirectRegister() {
     //   $location.path('/register');
     // }
