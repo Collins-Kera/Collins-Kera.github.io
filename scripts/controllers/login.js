@@ -13,6 +13,11 @@ angular.module('angbaseApp')
     // $scope.setChangePass = function() {
     //   $scope.changePass = true;
     // };
+    if(Auth.getUser()){
+    $scope.err = "You are logged in";
+    $location.path('/profile');
+  }
+
     //in the scope so we can call it from the view...attached to the Login button
     $scope.passwordLogin = function(email, pass) {
       $scope.err = null;
