@@ -27,6 +27,15 @@ angular.module('angbaseApp')
         getUser: function() {
           return auth.$getAuth();
         },
+        resetPassword: function(email) {
+          auth.$resetPassword({email: email})
+          .then(function() {
+            console.log("Password reset email sent successfully!");
+          })
+          .catch(function(error) {
+            console.error("Error: ", error);
+          });
+        },
         createAccount: function(email, pass, opts) {
           return auth.$createUser({email: email, password: pass})
             .then(function() {
@@ -40,15 +49,6 @@ angular.module('angbaseApp')
                 return user;
               });
             });
-        },
-        resetPassword: function(email) {
-          return auth.$resetPassword({email: email})
-          .then(function() {
-            console.log("Password reset email sent successfully!");
-          })
-          .catch(function(error) {
-            console.error("Error: ", error);
-          });
         },
         changePassword: function(email, oldPass, newPass) {
           return auth.$changePassword({email: email, oldPassword: oldPass, newPassword: newPass})
