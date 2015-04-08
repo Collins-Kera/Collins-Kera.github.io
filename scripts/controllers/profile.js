@@ -15,12 +15,10 @@ angular.module('angbaseApp')
 	}
 	else {
 		$scope.user = Auth.getUser();
+    console.log($scope.user.email);
 	}
 	$scope.changePassword = function(pass, newPass, confirm){
       $scope.err = null;
-      if (!pass ) {
-        $scope.err = 'Please enter current password';
-      }
       if ( newPass !== confirm ) {
         $scope.err = 'Passwords do not match';
       }
