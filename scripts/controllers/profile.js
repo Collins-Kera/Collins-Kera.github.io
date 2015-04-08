@@ -18,8 +18,8 @@ angular.module('angbaseApp')
     console.log("email" + $scope.user.email);
     // $scope.auth.$getCurrentUser().then(function(user) {
     //      console.log(user);
-      });
-	}
+    }
+	
 	$scope.changePassword = function(pass, newPass, confirm){
       $scope.err = null;
       if ( newPass !== confirm ) {
