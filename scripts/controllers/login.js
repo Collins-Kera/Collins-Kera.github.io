@@ -22,11 +22,12 @@ angular.module('angbaseApp')
     $scope.passwordLogin = function(email, pass) {
       $scope.err = null;
       Auth.passwordLogin({email: email, password: pass}, {rememberMe: true}).then(
-        loginEvent, redirect, showError
+        loginEvent, showError
       );
     };
     $scope.loginEvent = function () {
       $rootScope.$broadcast('loginClick');
+      redirect();
     };
     $scope.logout = function() {
       Auth.logout().then(redirectHome);
