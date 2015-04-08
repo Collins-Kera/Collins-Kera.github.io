@@ -40,6 +40,10 @@ angular
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl'
       })
+      .when('/profile', {
+        templateUrl: 'views/profile.html',
+        controller: 'ProfileCtrl'
+      })
       // .when('/services', {
       //   templateUrl: 'views/services.html',
       //   controller: 'ServicesCtrl'

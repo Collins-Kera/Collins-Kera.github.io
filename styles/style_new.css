@@ -112,6 +112,10 @@ border-radius: 3px;
 #main_login {
 	padding: 60px 0px 30px 0px;
 }
+#main_login input{
+	width: 40px;
+	max-width: 100px;
+}
 #main {
 background-color: #ffffff;
 padding: 0px;

@@ -49,8 +49,8 @@ angular.module('angbaseApp')
             console.error("Error: ", error);
           });
         },
-        changePassword: function() {
-          
+        changePassword: function(email, oldPass, newPass) {
+          return auth.$changePassword({email: email, oldPassword: oldPass, newPassword: newPass})
         },
 
   }

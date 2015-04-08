@@ -41,14 +41,20 @@ angular.module('angbaseApp')
 
     };
 
-    $scope.loginWithToken = function(){
-      Auth.loginWithToken(email, token);
-      $scope.changePass = true;
-    };
-
-    $scope.changePass = function(){
-      Auth.changePass(email, pass);
-      
+    $scope.changePass = function(email, pass, newPass, confirm){
+      $scope.err = null;
+      if (!pass ) {
+        $scope.err = 'Please enter current password';
+      }
+      if (!newPass ) {
+        $scope.err = 'Please enter new password';
+      }
+      else if ( newPass !== confirm ) {
+        $scope.err = 'Passwords do not match';
+      }
+      else {
+      Auth.changePassword(email, pass, newPass).then(redirect, showError);
+      }
     };
 
     //reset form in view if they change their minds
@@ -56,7 +62,7 @@ angular.module('angbaseApp')
         $scope.reset = false;
     }; 
 
-    //send them to the home screen if login successful  
+    //send them to the profile screen if login successful  
     function redirect() {
       $location.path('/profile');
     }
