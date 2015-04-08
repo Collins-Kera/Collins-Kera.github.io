@@ -8,7 +8,7 @@
  * Controller of the angbaseApp
  */
 angular.module('angbaseApp')
-  .controller('ProfileCtrl', function ($scope, Auth, $location, $route) {
+  .controller('ProfileCtrl', function ($scope, Auth, $location) {
 	if(!Auth.getUser()){
 		$scope.err = "Please Login";
 		$location.path('/login');
