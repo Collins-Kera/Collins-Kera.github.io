@@ -9,7 +9,7 @@
  */
 angular.module('angbaseApp')
   .controller('ContactCtrl', function ($scope, Auth, $location ) {
-    $scope.clearForm = function() {
-      $scope.err = "Message Sent!";
-    }
+    // $scope.clearForm = function() {
+    //   $scope.err = "Thank you.";
+    // }
   });
