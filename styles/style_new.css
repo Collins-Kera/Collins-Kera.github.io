@@ -568,7 +568,7 @@ color: #008000;
 		top: 0;
 		left: 0;
 		border: solid 3px #ffffff;
-		background: #1d4e89 url(images/menu.png) no-repeat 10px 11px;
+		background: #1d4e89 url(../images/icon-menu.png) no-repeat 10px 11px;
 		border-radius: 5px;
 		box-shadow: 0 1px 2px rgba(0,0,0,.3);
                 display: inline;
