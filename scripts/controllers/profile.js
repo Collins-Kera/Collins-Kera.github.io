@@ -9,12 +9,8 @@
  */
 angular.module('angbaseApp')
   .controller('ProfileCtrl', function ($scope, Auth, $location) {
-	$scope.loggedIn = Auth.getUser();
-    console.log($scope.loggedIn);
-    $scope.logout = function() {
-      Auth.logout().then(redirectHome);
-    }
-    function redirectHome() {
-      $location.path('/');
-    }
-  });
+	if(!Auth.getUser()){
+		$scope.err = "Please Login";
+		$location.path('/login');
+	}
+});
