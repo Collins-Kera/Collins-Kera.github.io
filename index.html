@@ -62,6 +62,7 @@
                     <li><a ng-href="#/about-orthodontics">About Orthodontics</a></li>
                     <li><a ng-href="#/contact">Contact</a></li>
                     <li><a ng-hide="loggedIn" ng-href="#/login" id="login_background">Login</a></li>
+                    <li><a ng-cloak ng-show="loggedIn" ng-href="#/profile">Profile</a></li>
                     <li><a ng-cloak ng-show="loggedIn" ng-click="logout()" ng-href="#/login">Logout</a></li>
                 </ul>
             </nav>
