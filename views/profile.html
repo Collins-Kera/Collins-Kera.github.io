@@ -3,11 +3,11 @@
 	<p>Welcome {{user.email}}</p>
 	<form ng-show="changePass">
 		<label for="oldPass">Old Password</label><br>
-		<input class="highlight" type="password" name="oldPass" id="oldPass" size="40" maxlength="100"><br>
+		<input class="highlight" required type="password" name="oldPass" id="oldPass" size="40" maxlength="100"><br>
 		<label for="newPass">New Password</label><br>
-		<input class="highlight" type="password" name="newPass" id="newPass" size="40" maxlength="100"><br>
+		<input class="highlight" required type="password" name="newPass" id="newPass" size="40" maxlength="100"><br>
 		<label for="confirmPass">Confirm New Password</label><br>
-		<input class="highlight" type="password" name="confirmPass" id="confirmPass" size="40" maxlength="100">
+		<input class="highlight" required type="password" name="confirmPass" id="confirmPass" size="40" maxlength="100">
 		<button ng-click="changePassword(oldPass, newPass, confirmPass)">Change Password</button>
 	</form>
 	<button ng-hide="changePass" ng-click="changePass = true">Change Password</button>

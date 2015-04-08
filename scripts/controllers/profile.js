@@ -21,10 +21,7 @@ angular.module('angbaseApp')
       if (!pass ) {
         $scope.err = 'Please enter current password';
       }
-      if (!newPass ) {
-        $scope.err = 'Please enter new password';
-      }
-      else if ( newPass !== confirm ) {
+      if ( newPass !== confirm ) {
         $scope.err = 'Passwords do not match';
       }
       else {
