@@ -549,12 +549,12 @@ color: #008000;
 <!-- Responsive Navigation -->
 
 @media screen and (max-width: 600px) {
-	.nav {
+	nav {
 		position: relative;
 		min-height: 40px;
                 float: right;
 	}	
-	.nav ul {
+	nav ul {
 		width: 180px;
 		padding: 5px 0;
 		position: absolute;
@@ -566,43 +566,43 @@ color: #008000;
 		box-shadow: 0 1px 2px rgba(0,0,0,.3);
                 margin-left: -150px;
 	}
-	.nav li {
+	nav li {
 		display: none; /* hide all <li> items */
 		margin: 0;
 	}
-	.nav .current {
+	nav .current {
 		display: block; /* show only current <li> item */
 	}
-	.nav a {
+	nav a {
 		display: block;
 		padding: 5px 5px 5px 32px;
 		text-align: left;
 	}
-	.nav .current a {
+	nav .current a {
 		background: none;
 		color: #000000;
 	}
 
 	/* on nav hover */
-	.nav ul:hover {
+	nav ul:hover {
 		background-image: none;
 	}
-	.nav ul:hover li {
+	nav ul:hover li {
 		display: block;
 		margin: 0 0 5px;
 	}
-	.nav ul:hover .current {
+	nav ul:hover .current {
 		background: url(images/icon-check.png) no-repeat 10px 7px;
 	}
 
 	/* right nav */
-	.nav.right ul {
+	nav.right ul {
 		left: auto;
 		right: 0;
 	}
 
 	/* center nav */
-	.nav.center ul {
+	nav.center ul {
 		left: 50%;
 		margin-left: -90px;
 	}
