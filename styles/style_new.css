@@ -550,7 +550,10 @@ color: #008000;
 
 @media screen and (max-width: 600px) {
 	body {
-		font-size: 0.6em;
+        	font-size: .6em;
+	}
+	h3 {
+	       font-size:  1.2em;
 	}
 	nav {
 		position: relative;
