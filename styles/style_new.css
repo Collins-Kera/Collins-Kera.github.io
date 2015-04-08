@@ -132,9 +132,9 @@ margin-bottom: -3px;
 }
 #main_content {
 width: 40%;
-padding: 0px 30px 0px 30px;
+padding: 0px 2% 0px 2%;
 display: inline;
-float: right;/*I added this to place the prom seccion to the right*/
+float: left;/*I added this to place the prom seccion to the right*/
 }
 /*padding on h1 element was separating the side block
 from footer*/
