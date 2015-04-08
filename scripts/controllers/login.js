@@ -42,6 +42,7 @@ angular.module('angbaseApp')
         $scope.err = 'Passwords do not match';
       }
       else {
+        $rootScope.$broadcast('loginClick');
         Auth.createAccount(email, pass, {rememberMe: true})
           .then(redirect, showError);
       }
@@ -51,6 +52,8 @@ angular.module('angbaseApp')
     $scope.resetPassword = function(email){
        Auth.resetPassword(email);  
       $scope.reset = false;
+      $scope.err = "Email sent.";
+      $location.path('/login');
 
     };
 
