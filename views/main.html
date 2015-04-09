@@ -27,7 +27,8 @@
             <img src="">
             <button type="submit" ng-click="submitPromo()">Submit Promo</button>
         </form>
-        <img src="images/promo_filler.jpg" alt="Promo Filler" />
+        <p ng-show="customPromo">{{promotxt}}</p>
+        <img ng-hide="customPromo" src="images/promo_filler.jpg" alt="Promo Filler" />
     </section>    
     <section id="main_content">
         <h1>Welcome to Rexburg Orthodontics</h1>
