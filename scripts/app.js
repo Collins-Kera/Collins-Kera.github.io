@@ -44,6 +44,10 @@ angular
         templateUrl: 'views/profile.html',
         controller: 'ProfileCtrl'
       })
+      .when('/messages', {
+        templateUrl: 'views/messages.html',
+        controller: 'MsgCtrl'
+      })
       // .when('/services', {
       //   templateUrl: 'views/services.html',
       //   controller: 'ServicesCtrl'

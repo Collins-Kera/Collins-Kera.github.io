@@ -1,6 +1,6 @@
 <div id="main_contact">
     <h1>Contact Us</h1>
-            <!-- <form name="contactform" method="post" action="">
+            <form name="contactform" method="post" action="">
                     <label>
                         Name <br />
                         <input type="text" name="name" size="40" maxlength="100" class="highlight"/>
@@ -22,19 +22,8 @@
                          <textarea rows="6" cols="40" id="message" class="highlight">
                          </textarea>
                     <br />
-                         <input type="submit" name="submit" value="Submit" ng-click="clearForm()" class="button">
-            </form> -->
-            <!-- Do not change the code! -->
-            <a id="foxyform_embed_link_655662" href="http://www.foxyform.com/">foxyform</a>
-            <script type="text/javascript">
-            (function(d, t){
-               var g = d.createElement(t),
-                   s = d.getElementsByTagName(t)[0];
-               g.src = "http://www.foxyform.com/js.php?id=655662&sec_hash=96313f2f392&width=350px";
-               s.parentNode.insertBefore(g, s);
-            }(document, "script"));
-            </script>
-            <!-- Do not change the code! -->
+                         <input type="submit" name="submit" value="Submit" ng-click="submitForm(name, email, phone, message)" class="button">
+            </form>
            <!--  <p>{{err}}</p> -->
   </div>
  <aside id="sidebar-contact">
