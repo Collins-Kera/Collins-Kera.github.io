@@ -163,6 +163,7 @@ width: 45%;
 display: inline;
 float: left;
 border: 1px solid #1D4E89;
+margin-bottom: 5%;
 }
 /*Special width for meet the doctor page */
 .image_inline_meet {
@@ -177,7 +178,7 @@ width: 45%;
 padding-left: 20px;
 display: inline;
 float: right;
-margin-bottom: 10%;
+margin-bottom: 15%;
 }
 /*Special width for meet the doctor page */
 .text_inline_meet {
@@ -187,7 +188,6 @@ float: right;
 }
 .one-half-full {
 display: block;
-margin-bottom: 10%;
 width: 100%;
 }
 .one-half-full-aboutus {
@@ -640,6 +640,11 @@ color: #008000;
         footer ul{
             display: none;
         }
+        .one-half-full {
+            display: block;
+            margin-bottom: 10%;
+            width: 100%;
+         }
 }
 @media screen and (max-width: 320px) {
         body {
